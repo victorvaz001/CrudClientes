@@ -5,7 +5,6 @@ INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Victor 
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Marcianita Gonçalves de Souza', '1235256587', 5.000, '1961-10-24', 1);
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Walter Vaz', '025263652', 1.000, '1970-03-15', 1);
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Maria Selenita de Souza', '3362525125', 3.500, '1969-05-30', 1);
-
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Rilker Wagner', '996585471', 1.550, '1980-06-30', 4);
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Rochele Brasil', '2525632512', 10.000, '1990-08-06', 10);
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Paulo Barbosa', '8858747411', 1.987, '1970-04-20', 2);
