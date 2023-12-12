@@ -1,11 +1,17 @@
 package com.victorvaz.CrudClientes.entities;
 
+import jakarta.persistence.*;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_client")
 public class Client implements Serializable {
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String cpf;
