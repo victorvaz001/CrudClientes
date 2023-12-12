@@ -4,6 +4,8 @@ import com.victorvaz.CrudClientes.dto.ClientDTO;
 import com.victorvaz.CrudClientes.entities.Client;
 import com.victorvaz.CrudClientes.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,14 +19,13 @@ public class ClientService {
 
     @Transactional(readOnly = true)
     public ClientDTO findById(Long id){
-
         Client client = clientRepository.findById(id).get();
         return new ClientDTO(client);
     }
 
     @Transactional(readOnly = true)
-    public List<ClientDTO> findAll(){
-        List<Client> client = clientRepository.findAll();
-        return client.stream().map(x -> new ClientDTO(x)).toList();
+    public Page<ClientDTO> findAll(Pageable pageable){
+        Page<Client> client = clientRepository.findAll(pageable);
+        return client.map(x -> new ClientDTO(x));
     }
 }

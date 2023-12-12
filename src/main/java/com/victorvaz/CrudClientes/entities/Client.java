@@ -15,6 +15,8 @@ public class Client implements Serializable {
     private Long id;
     private String name;
     private String cpf;
+
+
     private Double income;
 
     @Temporal(TemporalType.DATE)
