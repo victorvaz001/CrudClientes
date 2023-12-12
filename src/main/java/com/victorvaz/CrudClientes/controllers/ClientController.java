@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -21,8 +22,13 @@ public class ClientController {
 
     @GetMapping(value = "/{id}")
     public ClientDTO findById(@PathVariable Long id){
-
         ClientDTO dto = clientService.findById(id);
         return dto;
+    }
+
+    @GetMapping
+    public List<ClientDTO> findAll (){
+        List<ClientDTO> result = clientService.findAll();
+        return result;
     }
 }
