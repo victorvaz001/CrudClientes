@@ -3,6 +3,7 @@ package com.victorvaz.CrudClientes.services;
 import com.victorvaz.CrudClientes.dto.ClientDTO;
 import com.victorvaz.CrudClientes.entities.Client;
 import com.victorvaz.CrudClientes.repositories.ClientRepository;
+import com.victorvaz.CrudClientes.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,7 +19,9 @@ public class ClientService {
 
     @Transactional(readOnly = true)
     public ClientDTO findById(Long id){
-        Client client = clientRepository.findById(id).get();
+
+        Client client = clientRepository.findById(id).orElseThrow(
+                () -> new ResourceNotFoundException("Id não encontrado!"));
         return new ClientDTO(client);
     }
 
