@@ -60,6 +60,7 @@ public class ClientService {
     if (!clientRepository.existsById(id)){
         throw new ResourceNotFoundException("Id não encontrado!");
     }
+
         clientRepository.deleteById(id);
     }
 
