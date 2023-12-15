@@ -29,6 +29,7 @@ public class ClientController {
 
     @PostMapping
     public ClientDTO insert(@RequestBody ClientDTO dto) {
+
         return clientService.insert(dto);
     }
 
