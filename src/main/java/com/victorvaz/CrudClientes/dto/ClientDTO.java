@@ -12,6 +12,7 @@ import java.time.LocalDate;
 
 public class ClientDTO {
 
+
     private Long id;
 
     @NotBlank(message = "O campo 'name' e requerido")

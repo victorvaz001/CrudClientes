@@ -22,7 +22,7 @@ public class ClientService {
     public ClientDTO findById(Long id){
 
         Client client = clientRepository.findById(id).orElseThrow(
-                () -> new ResourceNotFoundException("Id não encontrado!"));
+                () -> new ResourceNotFoundException("Cliente inexistente"));
         return new ClientDTO(client);
     }
 
