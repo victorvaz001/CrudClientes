@@ -7,7 +7,7 @@ O Project Clients foi desenvolvido durante o curso Java Spring Professional da e
 
 Project Client e uma aplicação back-end, contendo um CRUD completo de web services REST para acessar um recurso de clientes, contendo as cinco operações básicas.
 
-• Busca paginada de recursos
+• Busca paginada de recursos <br>
 • Busca de recurso por id
 • Inserir novo recurso
 • Atualizar recurso
