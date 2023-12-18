@@ -11,7 +11,7 @@ Project Client e uma aplicação back-end, contendo um CRUD completo de web serv
 • Busca de recurso por id <br>
 • Inserir novo recurso <br>
 • Atualizar recurso <br>
-• Deletar recurso<br>
+• Deletar recurso
 
 ## Configuração
 O Projeto já está configurado para ambinte de teste, seed de cliente, Banco de dados H2, JPA e WEB
