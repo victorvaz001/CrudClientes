@@ -60,6 +60,7 @@ O Projeto já está configurado para ambinte de teste, seed de cliente, Banco de
 ![image](https://github.com/victorvaz001/CrudClientes/assets/42657636/b9b58151-61af-4ef8-91c5-c57b0d1db18c)
 
   - Atualizando cliente
+  - 
 ![image](https://github.com/victorvaz001/CrudClientes/assets/42657636/5eb44018-3ac7-4f33-8f06-537a57bc2ecc)
 
   - Deletando cliente
