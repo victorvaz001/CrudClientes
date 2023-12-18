@@ -3,17 +3,36 @@
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/victorvaz001/workshop-springboot3-jpa/edit/main/LICENSE) 
 
 ## Sobre o Projeto
-Projeto Spring Boot 1 foi construido durante o curso  (Java COMPLETO 2023 Programação Orientada a Objetos +Projetos) ministrado no site (https://www.udemy.com/course/java-curso-completo/),
-aplicação consiste no aprendizado basico de utilização do Spring Boot com uma base de dados, utilizando metodos como GET, POST, PUT e Delete.
+O Project Clients foi desenvolvido durante o curso Java Spring Professional da escola devsuperior, ministrado no site devsuperior.club
 
-## Objetivo do projeto
-  - Criar o projeto Spring Boot utilizando o initializr (https://start.spring.io/)
-  - Implementar um modelo Conceitual
-  - Estruturar camadas lógicas: resource, service, repository
-  - Configurar o Banco de dados H2
-  - Desenvolver Banco de dados com os metodos create, Retrieve, Update, Delete
-  - Tratar de exceções
-  - Utilizar o Hibernate
+Project Client e uma aplicação back-end, contendo um CRUD completo de web services REST para acessar um recurso de clientes, contendo as cinco operações básicas.
+• Busca paginada de recursos
+• Busca de recurso por id
+• Inserir novo recurso
+• Atualizar recurso
+• Deletar recurso
+
+## Configuração
+O Projeto já está configurado para ambinte de teste, seed de cliente, Banco de dados H2, JPA e WEB
+
+## Competencias 
+•  Implementação de operações de CRUD
+•  Tratamento de exceções
+•  Customização de respostas HTTP
+•  Validação de dados com Bean Validation
+
+
+## Tratamento de codigos de erro
+- Busca por id retorna cliente existente
+- Busca por id retorna 404 para cliente inexistente
+- Busca paginada retorna listagem paginada 
+- Inserção de cliente insere cliente com dados válidos
+- Inserção de cliente retorna 422 e mensagens customizadas com dados inválidos
+- Atualização de cliente atualiza cliente com dados válidos
+- Atualização de cliente retorna 404 para cliente inexistente
+- Atualização de cliente retorna 422 e mensagens customizadas com dados inválidos
+- Deleção de cliente deleta cliente existente
+- Deleção de cliente retorna 404 para cliente inexistente
 
 ## Tecnologias
   - Java 17
@@ -21,54 +40,40 @@ aplicação consiste no aprendizado basico de utilização do Spring Boot com um
   - Maven
   - Base de dados (H2)
 
-## Modelo relacional
-![Modelo-Relacional](https://github.com/victorvaz001/workshop-springboot3-jpa/assets/42657636/eccf13ff-6553-4e22-a87b-67b7a8178dda)
-
+## Modelo de dominio
+![image](https://github.com/victorvaz001/CrudClientes/assets/42657636/e952249c-6a66-429a-91ea-6c611417e699)
 
   ## Teste Endpoint com o Postman
 
-  - Recuperando Usuários
-  - Metodo GET
-  - Endpoint: http://localhost:8080/users
+  - Recuperando client por id
 
-![Recuperando-Usuarios](https://github.com/victorvaz001/workshop-springboot3-jpa/assets/42657636/e38272de-5bf2-485a-9bb3-2bc3e4655ef3)
+![image](https://github.com/victorvaz001/CrudClientes/assets/42657636/5370b1be-66c2-4bed-8b6b-44f08266260f)
 
-  - Recuperando categorias
-  - Metodo GET
-  - Endpoint: http://localhost:8080/categories
-    
-![RecuperandoCategorias](https://github.com/victorvaz001/workshop-springboot3-jpa/assets/42657636/b5da3766-56fd-4fd3-90e3-e2fa168fc28c)
+  - Recuperando clientes com busca paginada
 
-  - Cadastro de Usuários, passando parametros no Body
-  - Metodo Post
-  - Endpoint: http://localhost:8080/users
+![image](https://github.com/victorvaz001/CrudClientes/assets/42657636/36c52b97-5541-4d1b-921b-d1d68f8891e8)
 
-![CadastroUusuario](https://github.com/victorvaz001/workshop-springboot3-jpa/assets/42657636/2883ae2d-9dad-46d3-affc-1e6850ec82c1)
+  - Cadastro de cliente
+  - Status: 201 Created
+![image](https://github.com/victorvaz001/CrudClientes/assets/42657636/b9b58151-61af-4ef8-91c5-c57b0d1db18c)
 
-  - Deletando de Usuário, passando um id
-  - Metodo Delete
-  - Endpoint: http://localhost:8080/users/3
+  - Atualizando cliente
+![image](https://github.com/victorvaz001/CrudClientes/assets/42657636/5eb44018-3ac7-4f33-8f06-537a57bc2ecc)
 
-![Delete](https://github.com/victorvaz001/workshop-springboot3-jpa/assets/42657636/bfded5b6-333f-47f8-b0ab-79e3e99695ab)
+  - Deletando cliente
+  - Status: 204 No Content
 
-  - Atualização de Usuário, passando parametros no Body
-  - Metodo Put
-  - Endpoint: http://localhost:8080/users/1
+![image](https://github.com/victorvaz001/CrudClientes/assets/42657636/5f18e69e-4794-466d-890f-5bdb003d12bf)
 
-![Update](https://github.com/victorvaz001/workshop-springboot3-jpa/assets/42657636/12fe4895-8110-4e40-8d27-8d152f81be67)
 
 ## Como executar o projeto - Windows
 -  Copiar a URL do projeto na aba SSH
--  Executar o comando git clone com a url do projeto 
+-  Executar o comando git clone com a url do projeto
+-  Importar o projeto para alguma IDE
 
-## Tabelas criadas
- - TB_CATEGORY
- - TB_ORDER
- - TB_ORDER_ITEM
- - TB_PAYMENT
- - TB_PRODUCT
- - TB_PRODUCT_CATEGORY
- - TB_USER
+## Tabela
+ - TB_CLIENT
+
 
 ## Autor
 
