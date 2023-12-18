@@ -17,9 +17,9 @@ Project Client e uma aplicação back-end, contendo um CRUD completo de web serv
 O Projeto já está configurado para ambinte de teste, seed de cliente, Banco de dados H2, JPA e WEB
 
 ## Competencias 
-•  Implementação de operações de CRUD
-•  Tratamento de exceções
-•  Customização de respostas HTTP
+•  Implementação de operações de CRUD <br>
+•  Tratamento de exceções <br>
+•  Customização de respostas HTTP <br>
 •  Validação de dados com Bean Validation
 
 
